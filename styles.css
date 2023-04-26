@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+}
+
+.main{
+    height: 80vh;
+    position: relative;
+}
+header, footer{
+    height: 10vh;
+}
+header{
+    background-color: bisque;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: .5em;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 2rem;
+    width: 42rem;
+    height: 60rem;
+    padding: 2em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
