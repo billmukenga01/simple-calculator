@@ -6,39 +6,46 @@
 :root{
     font-size: 10px;
 }
-
-.main{
-    height: 80vh;
+body {
+    background-color: bisque;
     position: relative;
 }
-header, footer{
-    height: 10vh;
-}
+
+
 header{
+    height: 10rem;
     font-size: 4rem;
     text-align: center;
     padding-top: .5em;
+    margin-bottom: 2rem;
 
 }
-body {
-    background-color: bisque;
+footer{
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+.main{
+    display: flex;
+    position: relative;
+    margin-bottom: 100px;
+}
+
 .main > *{
     background-color: aliceblue;
+    
+
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 2rem;
     width: 42rem;
     height: 60rem;
     padding: 2em;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     border: 1px solid black;
     border-radius: 20px;
     
