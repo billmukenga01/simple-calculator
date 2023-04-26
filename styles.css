@@ -15,11 +15,16 @@ header, footer{
     height: 10vh;
 }
 header{
-    background-color: bisque;
     font-size: 4rem;
     text-align: center;
     padding-top: .5em;
 
+}
+body {
+    background-color: bisque;
+}
+.main > *{
+    background-color: aliceblue;
 }
 .container{
     display: grid;
@@ -35,6 +40,6 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     
 }
