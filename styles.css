@@ -5,6 +5,9 @@
 }
 :root{
     font-size: 10px;
+    --btn-border: 1px solid black;
+    --btn-hover-clr: lightgrey;
+    --base-fs: 2rem;
 }
 body {
     background-color: bisque;
@@ -40,7 +43,7 @@ footer{
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     gap: 2rem;
     width: 42rem;
     height: 60rem;
@@ -49,4 +52,50 @@ footer{
     border: 1px solid black;
     border-radius: 20px;
     
+}
+.grid-items{
+    border: var(--btn-border);
+    font-size: var(--base-fs);
+}
+.wrkng-area{
+    grid-area: 1/1/3/-1;
+}
+.seven{
+    grid-area: 4/1/5/2;
+}
+.eight{
+    grid-area: 4/2/5/3;
+}
+.nine{
+    grid-area: 4/3/5/4;
+}
+.six{
+    grid-area: 5/1/6/2 ;
+}
+.five{
+    grid-area: 5/2/6/3 ;
+}
+.four{
+    grid-area: 5/3/6/4 ;
+}
+.three{
+    grid-area: 6/3/7/4;
+}
+.two{
+    grid-area: 6/2/7/3 ;
+}
+.one{
+    grid-area: 6/1/7/2 ;
+}
+.zero{
+    grid-area: 7/1/8/2;
+}
+.clear{
+    grid-area: 3/1/4/3;
+}
+.delete{
+    grid-area:3/3/4/5 ;
+}
+.addition{
+    grid-area: -1/-1/-2/-2;
 }
