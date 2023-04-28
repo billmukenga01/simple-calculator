@@ -55,7 +55,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     width: 42rem;
     height: 60rem;
     padding: 2em;
@@ -146,7 +146,8 @@ footer{
 .delete{
     grid-area:3/3/4/4 ;
     background-color: var(--base-red-clr);
-    font-size: calc(var(--base-fs) * .8);
+    font-size: min(calc(var(--base-fs) * .65));
+    
 }
 
 .equals{
