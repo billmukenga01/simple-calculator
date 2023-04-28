@@ -6,10 +6,19 @@
 :root{
     font-size: 10px;
     --btn-border: 1px solid black;
-    --btn-hover-clr: lightgrey;
+    --btn-lightgrey-clr: rgb(224,224,224);
     --base-fs: 2rem;
-    --base-green-clr: green;
-    --base-error-clr: red;
+    --base-green-clr: rgb(102,255,102);
+    --base-red-clr: rgb(251,51,51);
+    --hover-red-clr: rgb(255,0,0);
+    --hover-lightgrey-clr: rgb(192,192,192);
+    --hover-green-clr: rgb(51,255,51);
+    --text-align: center;
+    --small-br: 10px;
+    --medium-br: 15px;
+    --large-br: 20px;
+    --small-border: 1px solid black;
+    
 }
 body {
     background-color: bisque;
@@ -19,8 +28,8 @@ body {
 
 header{
     height: 10rem;
-    font-size: 4rem;
-    text-align: center;
+    font-size: calc(var(--base-fs) + 1.5vw );
+    text-align: var(--text-align);
     padding-top: .5em;
     margin-bottom: 2rem;
 
@@ -50,14 +59,15 @@ footer{
     height: 60rem;
     padding: 2em;
     margin: auto;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: var(--small-border);
+    border-radius: var(--large-br);
     
 }
 .grid__items{
     border: var(--btn-border);
     font-size: var(--base-fs);
-    text-align: center;
+    text-align: var(--text-align);
+    font-weight: bold;
     position: relative;
 
 }
@@ -69,12 +79,24 @@ footer{
     transform: translate(-50%, -50%);
 }
 .grid__items:not(.wrkng--area, .clear, .delete, .equals){
-    background-color: var(--btn-hover-clr);
+    background-color: var(--btn-lightgrey-clr);
 }
+.grid__items:not(.wrkng--area, .clear, .delete, .equals):hover, 
+.grid__items:not(.wrkng--area, .clear, .delete, .equals):focus{
+    background-color: var(--hover-lightgrey-clr);
+}
+.clear:hover, .delete:hover,
+.clear:focus, .delete:focus{
+    background-color: var(--hover-red-clr);
+}
+.equals:hover, .equals:focus{
+    background-color: var(--hover-green-clr);
+}
+
 .container{
     background-color: grey;
 }
-.container > .wrkng--area{
+.wrkng--area{
     background-color: white;
 }
 .wrkng--area{
@@ -113,13 +135,17 @@ footer{
 .addition{
     grid-area: -1/-1/-2/-2;
 }
+.point{
+
+}
 .clear{
     grid-area: 3/1/4/3;
-    background-color: var(--base-error-clr);
+    background-color: var(--base-red-clr);
 }
 .delete{
-    grid-area:3/3/4/5 ;
-    background-color: var(--base-error-clr);
+    grid-area:3/3/4/4 ;
+    background-color: var(--base-red-clr);
+    font-size: calc(var(--base-fs) * .8);
 }
 
 .equals{
