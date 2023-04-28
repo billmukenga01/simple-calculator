@@ -32,7 +32,7 @@ header{
     font-size: calc(var(--base-fs) + 1.5vw );
     text-align: var(--text-align);
     padding-top: .5em;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 
 }
 footer{
@@ -66,7 +66,7 @@ footer{
 }
 .grid__items{
     border: var(--btn-border);
-    font-size: var(--base-fs);
+    font-size: calc(var(--base-fs)* 2);
     text-align: var(--text-align);
     font-weight: bold;
     position: relative;
@@ -79,11 +79,12 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.grid__items:not(.wrkng--area, .clear, .delete, .equals){
+.grid__items:not(.wrkng--area, .clear, .equals){
     background-color: var(--btn-lightgrey-clr);
+    border-radius: calc(var(--large-br) *2);
 }
-.grid__items:not(.wrkng--area, .clear, .delete, .equals):hover, 
-.grid__items:not(.wrkng--area, .clear, .delete, .equals):focus{
+.grid__items:not(.wrkng--area, .clear,.delete, .equals):hover, 
+.grid__items:not(.wrkng--area, .clear,.delete, .equals):focus{
     background-color: var(--hover-lightgrey-clr);
 }
 .clear:hover, .delete:hover,
@@ -142,10 +143,11 @@ footer{
 .clear{
     grid-area: 3/1/4/3;
     background-color: var(--base-red-clr);
+    font-size: min(calc(var(--base-fs)));
 }
 .delete{
     grid-area:3/3/4/4 ;
-    background-color: var(--base-red-clr);
+    
     font-size: min(calc(var(--base-fs) * .65));
     
 }
