@@ -16,7 +16,9 @@ container.addEventListener('click', e =>{
             if(e.target.classList.contains('clear')){
 
             }else if(e.target.classList.contains('delete')){
-
+                output.splice(-1,1);
+                firstDisplay.textContent = output.join('');
+                e.stopImmediatePropagation();
             }else if(e.target.classList.contains('equals')){
 
             }else{
