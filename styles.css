@@ -86,6 +86,7 @@ footer{
     text-align: var(--text-align);
     font-weight: bold;
     position: relative;
+    user-select: none;
 
 }
 
