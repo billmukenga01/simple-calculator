@@ -3,6 +3,22 @@ let secondNumber;
 let operator;
 
 
+
+const container = document.querySelector('.container');
+const wrkngArea = document.querySelector('.wrkng--area');
+
+container.addEventListener('click', e =>{
+    let output;
+    if(! e.target.classList.contains('container')){
+        if(! e.target.classList.contains('wrkng--area')){
+            output = e.target.textContent;
+            wrkngArea.textContent = output;
+        }
+    }
+})
+
+
+
 const multiply = (num1, num2) =>{
     return num1 * num2;
 };
@@ -31,3 +47,6 @@ function operate (opp, num1, num2, ){
 }
 
 operate('*', 1, 2,);
+
+
+
