@@ -1,21 +1,23 @@
+const container = document.querySelector('.container');
+const wrkngArea = document.querySelector('.wrkng--area');
+const firstDisplay = document.querySelector('.wrkng--area__display-one');
+const secondDisplay = document.querySelector('.wrkng--area__display-two');
+
+
 let firstNumber;
 let secondNumber;
 let operator;
-
-
-
-const container = document.querySelector('.container');
-const wrkngArea = document.querySelector('.wrkng--area');
 
 container.addEventListener('click', e =>{
     let output;
     if(! e.target.classList.contains('container')){
         if(! e.target.classList.contains('wrkng--area')){
             output = e.target.textContent;
-            wrkngArea.textContent = output;
+            firstDisplay.textContent = output;
         }
     }
 })
+
 
 
 
