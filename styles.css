@@ -79,6 +79,7 @@ p{
     width: 100%;
     height: 50%;
     vertical-align: bottom;
+    overflow: auto;
 }
 .wrkng--area__display-one{
     bottom: 0;

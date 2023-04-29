@@ -7,13 +7,24 @@ const secondDisplay = document.querySelector('.wrkng--area__display-two');
 let firstNumber;
 let secondNumber;
 let operator;
+let output = [];
 
 container.addEventListener('click', e =>{
-    let output;
+    
     if(! e.target.classList.contains('container')){
         if(! e.target.classList.contains('wrkng--area')){
-            output = e.target.textContent;
-            firstDisplay.textContent = output;
+            if(e.target.classList.contains('clear')){
+
+            }else if(e.target.classList.contains('delete')){
+
+            }else if(e.target.classList.contains('equals')){
+
+            }else{
+                output.push(e.target.textContent);
+                firstDisplay.textContent = output.join('');
+            }
+
+            
         }
     }
 })
