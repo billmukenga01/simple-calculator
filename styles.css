@@ -14,6 +14,7 @@
     --medium-br: 15px;
     --large-br: 20px;
     --small-border: 1px solid black;
+    --base-blue-clr: rgb(59, 59, 243);
     
 }
 *{
@@ -81,11 +82,22 @@ footer{
 }
 .grid__items:not(.wrkng--area, .clear, .equals){
     background-color: var(--btn-lightgrey-clr);
-    border-radius: calc(var(--large-br) *2);
+    border-radius: calc(var(--large-br));
+}
+.grid__items:not(.wrkng--area, .clear, .equals, .delete,
+.point, .addition, .division, .multiply, .subtract){
+    border-radius: 50%;
+    
 }
 .grid__items:not(.wrkng--area, .clear,.delete, .equals):hover, 
 .grid__items:not(.wrkng--area, .clear,.delete, .equals):focus{
     background-color: var(--hover-lightgrey-clr);
+}
+.grid__items:not(.wrkng--area, .clear, .delete, .equals, .zero, .one, .two,
+.three, .four, .five, .six, .seven, .eight, .nine):hover, 
+.grid__items:not(.wrkng--area, .clear, .delete, .equals, .zero, .one, .two,
+.three, .four, .five, .six, .seven, .eight, .nine):focus{
+    background-color: var(--base-blue-clr);
 }
 .clear:hover, .delete:hover,
 .clear:focus, .delete:focus{
