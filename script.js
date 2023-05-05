@@ -14,8 +14,7 @@ container.addEventListener('click', e =>{
     if(! e.target.classList.contains('container')){
         if(! e.target.classList.contains('wrkng--area')){
             if(e.target.classList.contains('clear')){
-                secondDisplay.textContent = '';
-                firstDisplay.textContent = '0';
+               clear();
             }else if(e.target.classList.contains('delete')){
                 output.splice(-1,1);
                 firstDisplay.textContent = output.join('');
@@ -24,12 +23,25 @@ container.addEventListener('click', e =>{
                 operate(operator, firstNumber,secondNumber);
             }else{
                 output.push(e.target.textContent);
-                firstDisplay.textContent = output.join('');
+                // firstDisplay.textContent = output.join('');
                 if(e.target.classList.contains('division')){
-                    secondNumber = output.slice(output.indexOf('/'))
-                    firstNumber = output.slice(0 ,output.indexOf('/'))
+                    operator = '/';
+                    
+                    secondNumber = output.slice(output.indexOf('/'));
 
-                    secondDisplay.textContent = output.join('');
+                    // output = [];
+                    // output.push(e.target.textContent);
+                    firstNumber = output.slice(0 , output.indexOf('/'))
+                    // secondNumber.pop();
+                    secondNumber.splice(0, 1);
+                    
+                    secondDisplay.textContent = firstNumber;
+                    firstDisplay.textContent = '';
+                    firstDisplay.textContent = firstNumber;
+                    secondDisplay.textContent = secondNumber;
+
+                    firstNumber = operate(operator, firstNumber, secondNumber);
+                    firstDisplay.textContent = firstNumber;
                 }
                 if(e.target.classList.contains('multiply')){
 
@@ -44,7 +56,7 @@ container.addEventListener('click', e =>{
 
                 }
 
-                firstDisplay.textContent = output.join('');
+                // firstDisplay.textContent = output.join('');
             }
 
             
@@ -82,7 +94,13 @@ function operate (opp, num1, num2, ){
     }
 }
 
-operate('*', 1, 2,);
 
 
-
+function clear(){
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    output = [];
+    secondDisplay.textContent = '';
+    firstDisplay.textContent = '0';
+}
