@@ -79,6 +79,9 @@ footer{
 .wrkng--area__display-one{
     bottom: 0;
 }
+.wrkng--area__display-two{
+    top: 0;
+}
 .grid__items{
     display: flex;
     align-items: center;
