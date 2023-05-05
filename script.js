@@ -14,15 +14,36 @@ container.addEventListener('click', e =>{
     if(! e.target.classList.contains('container')){
         if(! e.target.classList.contains('wrkng--area')){
             if(e.target.classList.contains('clear')){
-
+                secondDisplay.textContent = '';
+                firstDisplay.textContent = '0';
             }else if(e.target.classList.contains('delete')){
                 output.splice(-1,1);
                 firstDisplay.textContent = output.join('');
                 e.stopImmediatePropagation();
             }else if(e.target.classList.contains('equals')){
-
+                operate(operator, firstNumber,secondNumber);
             }else{
                 output.push(e.target.textContent);
+                firstDisplay.textContent = output.join('');
+                if(e.target.classList.contains('division')){
+                    secondNumber = output.slice(output.indexOf('/'))
+                    firstNumber = output.slice(0 ,output.indexOf('/'))
+
+                    secondDisplay.textContent = output.join('');
+                }
+                if(e.target.classList.contains('multiply')){
+
+                }
+                if(e.target.classList.contains('subtract')){
+
+                }
+                if(e.target.classList.contains('equals')){
+
+                }
+                if(e.target.classList.contains('addition')){
+
+                }
+
                 firstDisplay.textContent = output.join('');
             }
 

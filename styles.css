@@ -55,6 +55,8 @@ footer{
 }
 .container{
     display: grid;
+    /* align-items: center; */
+    
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 1rem;
@@ -81,6 +83,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    vertical-align: middle;
     border: var(--btn-border);
     font-size: calc(var(--base-fs)* 2);
     text-align: var(--text-align);
