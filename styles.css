@@ -169,12 +169,12 @@ footer{
 .clear{
     grid-area: 3/1/4/3;
     background-color: var(--base-red-clr);
-    font-size: min(calc(var(--base-fs)));
+    font-size: min(calc(var(--base-fs) * 2 ));
 }
 .delete{
     grid-area:3/3/4/4 ;
     
-    font-size: min(calc(var(--base-fs) * .65));
+    font-size: min(calc(var(--base-fs) * 2));
     
 }
 
