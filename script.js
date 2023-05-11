@@ -36,10 +36,9 @@ function operate (opp, num1, num2, ){
 
 
 function clear(){
-  firstNumberStr = '';
-  secondNumberStr = '';
+  total = '0';
+  operationStr = '';
   operator = '';
-  output = [];
   secondDisplay.textContent = '';
   firstDisplay.textContent = '0';
 }
