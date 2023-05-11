@@ -4,7 +4,7 @@ const firstDisplay = document.querySelector('.wrkng--area__display-one');
 const secondDisplay = document.querySelector('.wrkng--area__display-two');
 
 
-let total = 0
+let total = '0'
 let operationStr = '';
 let operator;
 
@@ -55,13 +55,13 @@ function handleSymbol(symbol){
 
 }
 function handleNumber(numberString){
-  if (buffer === '0'){
-    buffer = numberString;
+  if (total === '0'){
+    total = numberString;
   }else{
-    buffer += numberString;
+    total += numberString;
   }
 
-  firstDisplay.textContent = buffer;
+  firstDisplay.textContent = total;
 }
 
 function main (){
