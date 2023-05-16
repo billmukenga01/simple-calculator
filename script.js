@@ -83,7 +83,7 @@ function handleMath(){
   if (total == 0){
     total = operation
   }else{
-    operation(operation);
+    // operation(operation);
   }
 
   operationStr = '0';
