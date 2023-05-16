@@ -88,7 +88,17 @@ function handleMath(){
 
   operationStr = '0';
 }
-
+function operation(numStr){
+  if (operator === '+'){
+    total += numStr;
+  } else if (operator === '-'){
+    total -= numStr;
+  }else if (operator === '&times'){
+    total *= numStr;
+  }else{
+    total /= numStr;
+  }
+}
 function main (){
   container.addEventListener('click', e =>{
     
